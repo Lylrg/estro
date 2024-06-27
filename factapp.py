@@ -41,14 +41,9 @@ model = joblib.load(model_path)
 #model = joblib.load('rf_2.joblib')
 cv = joblib.load('cv_2.joblib')
 
-# Set default path for Tesseract (for local development)
-DEFAULT_TESSERACT_PATH = '/usr/local/bin/tesseract'
-# Get Tesseract path based on deployment environment
-tesseract_path = os.getenv('TESSERACT_PATH', DEFAULT_TESSERACT_PATH)
-pytesseract.pytesseract.tesseract_cmd = tesseract_path
-
 # Set up Tesseract executable path if needed (adjust the path accordingly)
-pytesseract.pytesseract.tesseract_cmd = r'/usr/local/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/mount/src/estro/'
+
 
 # Preprocessing function
 def preprocess_text(text):
