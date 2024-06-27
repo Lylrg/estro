@@ -41,8 +41,6 @@ model = joblib.load(model_path)
 #model = joblib.load('rf_2.joblib')
 cv = joblib.load('cv_2.joblib')
 
-# Set up Tesseract executable path if needed (adjust the path accordingly)
-pytesseract.pytesseract.tesseract_cmd = r'/mount/src/estro/'
 
 
 # Preprocessing function
